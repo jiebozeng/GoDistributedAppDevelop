@@ -82,19 +82,23 @@ func SubInventory(ch chan NotifySubInventory, proSkuAr []*ProductSku) {
 
 func main() {
 	//商品库存信息
+	fmt.Println("初始化商品库存的数据：")
 	productSkuAr := make([]*ProductSku, 10)
 	for i := int64(0); i < 10; i++ {
 		proSku := NewProductSku(1000+i, "T0010"+fmt.Sprintf("%d", i), 100)
 		productSkuAr[i] = proSku
 	}
-	fmt.Println("初始化商品库存的数据：")
+	//输出打印
 	for _, r := range productSkuAr {
 		r.Print()
 	}
-
+	//初始化消息通知通道chan
 	ch := make(chan NotifySubInventory)
+	//开启一个协程去模拟下单
 	go CreateOrder(ch)
+	//开启一个协程去减库存
 	go SubInventory(ch, productSkuAr)
 
+	//等待终端输入，避免协程没执行，就退出
 	fmt.Scanln()
 }
