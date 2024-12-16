@@ -1,78 +1,35 @@
 version: '1.0.0'
 
-Env: release # 开发用 debug 线上用 release
-
-#port: 9901
-
-tls:
-  enable: false
-  cert: /configs/server.pem
-  key:  /configs/server.key
-
-#gin:
-#  mode: debug  #release debug
+system:
+  port: "8188"
+  mode: "debug"
 
 logger:
   stdout: true # 正式环境/测试环境为false，本地的开发环境为true
   level: "debug" # 正式环境为 release开发环境/测试环境为debug
-  dir: "logs/nlogs"
+  dir: "../logs/nlogs"
   logMaxAge: 30 # 日志文件最大保存时间(天)
   logTypes: # 日志类型，可选stdout，file
     - "stdout"
     - "file"
   rotation: true
 
-#daylog的设置 暂没用
-daylog:
-  filepath: "./daylog" #路径
-  rotation: true    #是否开启 logrotate，默认是 false
-  daily: true       #是否按照每天 logrotate，默认是 false
-  hourly: false      #是否每小时 logrotate ，默认是 false
-
-#mysql:
-#  #dsn: root:123456@tcp(127.0.0.1:3306)/ssgf?charset=utf8&parseTime=true
-#  dsn: root:123456@tcp(192.168.1.224:3306)/ssgf?charset=utf8&parseTime=true
-#  MaxConns: 50
-#  MaxOpen: 1000
-
 mysql:
-  host: "8.134.139.240"
+  host: "127.0.0.1"
   port: "3306"
-  database: "db_shop105_ssgf"
+  database: "godistappdev"
   user: "root"
-  Password: "ssgf_60cs68"
+  Password: "test_138"
   maxIdleConns: 10 # 连接池最大空闲连接数
   maxOpenConns: 50 # 连接池最大打开连接数
+#
+#redis:
+#  host: "127.0.0.1"
+#  port: "6379"
+#  database: "1"
+#  password: "cs_123456"
 
-system:
-  port: "8188"
-  mode: "debug"
-  logPath: "./nlogs/"
-  logMaxSize: 1 # 单个日志文件最大大小(MB)
-  logMaxBackups: 5 # 日志文件最大备份数
-  logMaxAge: 30 # 日志文件最大保存时间(天)
-  logCompress: true # 是否压缩日志文件
-
-admin_token:
-  sign_key: "ddddd"
-  sttl: 4444
-  ttl: 4444
-  issuser: "ssgf"
-
-redis:
-  host: "8.134.139.240"
-  port: "6379"
-  database: "1"
-  password: "Ssgf_cs6102"
-
-Kafka:
-  host: 1.95.43.214
-  port: 9092
-
-ElasticSearch:
-  host: http://8.134.139.240:9200
-
-HuaWeiOBS:
-  ssgfimagesAccessUrl: "https://ssgfimages.obs.cn-southwest-2.myhuaweicloud.com" # 图片桶请求地址
-  OBSImageBasePath: new_shop_prod # OBS 图片基础地址
-  OBSImageBasePathDebug: new_shop # OBS 图片基础地址
+#tls:
+#  enable: false
+#  cert: /config/server.pem
+#  key:  /config/server.key
