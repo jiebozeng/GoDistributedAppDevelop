@@ -6,6 +6,10 @@ import (
 	"github.com/jiebozeng/golangutils/convert"
 )
 
+// @Tags	APP接口/获取单个用户信息
+// @Summary	获取单个用户信息
+// @Param   param query int "user_id"
+// @Router  /info/{user_id} [get]
 func GetUser(c *gin.Context) {
 	userId := c.Param("user_id")
 	userLgc := &logics.User_lgc{}
@@ -21,6 +25,10 @@ func GetUser(c *gin.Context) {
 	})
 }
 
+// @Tags	APP接口/获取用户列表
+// @Summary	获取用户列表 分页
+// @Param   param query int "page_num" "page_size"
+// @Router  /list [get]
 func UserList(c *gin.Context) {
 	pageNum := c.Param("page_num")
 	pageSize := c.Param("page_size")

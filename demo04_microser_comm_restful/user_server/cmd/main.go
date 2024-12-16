@@ -13,6 +13,7 @@ func main() {
 	config.Init()
 	//初始化log
 	logs.InitLogger(config.CONFIG.Logger.LogTypes, config.CONFIG.Logger.Dir, logs.LogEnvType(config.CONFIG.System.Mode), config.CONFIG.Logger.LogMaxAge)
+	//初始化数据库链接
 	mysqldb.InitMysql()
 	gin.SetMode(config.CONFIG.System.Mode)
 	r := gin.Default()
