@@ -1,5 +1,17 @@
 
 
+CREATE TABLE `ts_user`  (
+    `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'id  自增',
+    `user_id` bigint NOT NULL DEFAULT 0 COMMENT '用户id',
+    `user_name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '用户名',
+    `user_pwd` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '密码',
+    `user_mobile` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '手机号码',
+    `created_at` datetime NULL DEFAULT NULL,
+    `updated_at` datetime NULL DEFAULT NULL,
+    `deleted_at` datetime NULL DEFAULT NULL,
+    PRIMARY KEY (`id`) USING BTREE,
+    UNIQUE INDEX `user_id`(`user_id` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 
 
