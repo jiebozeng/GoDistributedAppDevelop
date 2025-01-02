@@ -1,0 +1,35 @@
+version: '1.0.0'
+
+system:
+  port: "8189"
+  mode: "debug"
+
+logger:
+  stdout: true # 正式环境/测试环境为false，本地的开发环境为true
+  level: "debug" # 正式环境为 release开发环境/测试环境为debug
+  dir: "../logs/nlogs"
+  logMaxAge: 30 # 日志文件最大保存时间(天)
+  logTypes: # 日志类型，可选stdout，file
+    - "stdout"
+    - "file"
+  rotation: true
+
+mysql:
+  host: "127.0.0.1"
+  port: "3306"
+  database: "godist_partition"
+  user: "root"
+  Password: "test_138"
+  maxIdleConns: 10 # 连接池最大空闲连接数
+  maxOpenConns: 50 # 连接池最大打开连接数
+#
+#redis:
+#  host: "127.0.0.1"
+#  port: "6379"
+#  database: "1"
+#  password: "cs_123456"
+
+#tls:
+#  enable: false
+#  cert: /config/server.pem
+#  key:  /config/server.key

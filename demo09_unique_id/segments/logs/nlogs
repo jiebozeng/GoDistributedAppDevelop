@@ -1,0 +1,10 @@
+{"level":"info","created_at":"2024-12-13T15:06:58.785+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2024-12-16T10:36:52.908+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2024-12-16T11:01:40.826+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2024-12-26T16:56:12.842+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2024-12-26T17:01:37.019+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2024-12-26T17:02:59.219+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2024-12-26T17:06:44.745+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2024-12-26T17:36:27.818+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2024-12-26T17:37:43.563+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2024-12-26T17:40:54.031+0800","caller":"logs/log.go:61","message":"log server start"}
