@@ -8,3 +8,8 @@
 {"level":"info","created_at":"2024-12-26T17:36:27.818+0800","caller":"logs/log.go:61","message":"log server start"}
 {"level":"info","created_at":"2024-12-26T17:37:43.563+0800","caller":"logs/log.go:61","message":"log server start"}
 {"level":"info","created_at":"2024-12-26T17:40:54.031+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-01-02T14:38:32.336+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-01-02T14:39:39.596+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-01-02T15:10:41.153+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-01-02T15:13:10.164+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-01-02T15:49:27.576+0800","caller":"logs/log.go:61","message":"log server start"}

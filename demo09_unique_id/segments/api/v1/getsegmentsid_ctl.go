@@ -6,11 +6,14 @@ import (
 	"github.com/jiebozeng/golangutils/convert"
 )
 
+// @Tags	APP接口/基于数据库获取号码段
+// @Summary	基于数据库获取号码段 [minId,maxId] 都可用
+// @Param   param query int "biz_type"
+// @Router  /segmentsid/biz_type [get]
 func GetSegIds(c *gin.Context) {
 	bizType := c.Param("biz_type")
-	version := c.Param("version")
-	userLgc := &logics.User_lgc{}
-	user, err := userLgc.GetUserByUid(convert.ToInt64(userId))
+	segLgc := &logics.Segmentsid_lgc{}
+	minId, maxId, err := segLgc.GetSegmentsIds(convert.ToInt64(bizType))
 	if err != nil {
 		c.JSON(-1, gin.H{
 			"err": err.Error(),
@@ -18,6 +21,8 @@ func GetSegIds(c *gin.Context) {
 		return
 	}
 	c.JSON(0, gin.H{
-		"user": user,
+		"min_id":   minId,
+		"max_id":   maxId,
+		"biz_type": bizType,
 	})
 }

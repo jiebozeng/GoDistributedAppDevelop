@@ -1,26 +1,19 @@
--- 创建用户表模板
-CREATE TABLE user_template (
-    `id` bigint NOT NULL AUTO_INCREMENT COMMENT '自增ID',
-    `user_id` bigint NOT NULL DEFAULT 0 COMMENT '用户ID',
-    `user_name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '用户名',
-    `user_pwd` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '密码',
-    `user_mobile` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '手机号码',
-    `user_email` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '邮箱',
-    `created_at` datetime NULL DEFAULT NULL COMMENT '创建时间',
-    `updated_at` datetime NULL DEFAULT NULL COMMENT '更新时间',
-    `deleted_at` datetime NULL DEFAULT NULL COMMENT '删除时间',
-    PRIMARY KEY (`id`) USING BTREE,
-    UNIQUE INDEX `user_id`(`user_id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+#创建数据库
+CREATE DATABASE `godist_segmentsids` CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_general_ci';
+use godist_segmentsids;
+#创建表
+CREATE TABLE id_generator (
+    `id`            BIGINT NOT NULL AUTO_INCREMENT,
+    `max_id`        BIGINT NOT NULL COMMENT '当前最大id',
+    `step`          BIGINT NOT NULL COMMENT '号段的步长',
+    `biz_type`      int NOT NULL COMMENT '业务类型',
+    `version`       BIGINT NOT NULL COMMENT '版本号',
+    `created_at`    DATETIME,
+    `updated_at`    DATETIME,
+    `deleted_at`    DATETIME,
+    PRIMARY KEY (`id`)
+);
 
--- 使用模板生成具体表
-CREATE TABLE `user_1` LIKE `user_template`;
-CREATE TABLE `user_2` LIKE `user_template`;
-CREATE TABLE `user_3` LIKE `user_template`;
-CREATE TABLE `user_4` LIKE `user_template`;
-CREATE TABLE `user_5` LIKE `user_template`;
-CREATE TABLE `user_6` LIKE `user_template`;
-CREATE TABLE `user_7` LIKE `user_template`;
-CREATE TABLE `user_8` LIKE `user_template`;
-CREATE TABLE `user_9` LIKE `user_template`;
-CREATE TABLE `user_10` LIKE `user_template`;
+#初始化两条记录 初始max_id 为1 1 步长为1000 500 业务类型 1 2 版本号为 1 1
+INSERT INTO id_generator (max_id, step, biz_type, version,created_at,updated_at) VALUES (1, 1000, 1, 1,NOW(),NOW());
+INSERT INTO id_generator (max_id, step, biz_type, version,created_at,updated_at) VALUES (1, 500, 2, 1,NOW(),NOW());

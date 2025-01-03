@@ -1,7 +1,7 @@
 version: '1.0.0'
 
 system:
-  port: "8189"
+  port: "8190"
   mode: "debug"
 
 logger:
@@ -17,7 +17,7 @@ logger:
 mysql:
   host: "127.0.0.1"
   port: "3306"
-  database: "godist_partition"
+  database: "godist_segmentsids"
   user: "root"
   Password: "test_138"
   maxIdleConns: 10 # 连接池最大空闲连接数

@@ -1,8 +1,8 @@
 package mysqldb
 
 import (
-	"GoDistributedAppDevelop/demo08_partition/config"
-	"GoDistributedAppDevelop/demo08_partition/pkg/logs"
+	"GoDistributedAppDevelop/demo09_unique_id/segments/config"
+	"GoDistributedAppDevelop/demo09_unique_id/segments/pkg/logs"
 	"database/sql"
 	//"github.com/go-sql-driver/mysql"
 

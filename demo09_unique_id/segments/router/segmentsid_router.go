@@ -6,10 +6,10 @@ import (
 )
 
 func InitSegmentsIdRouter(r *gin.Engine) {
-	// 用户路由组
-	user := r.Group("/segmentsid")
+	// 获取号码段路由组
+	seg := r.Group("/segmentsid")
 	{
 		//获取号码段
-		user.GET("/:biz_type/:version", v1.GetSegIds)
+		seg.GET("/:biz_type", v1.GetSegIds)
 	}
 }

@@ -2,13 +2,17 @@ package models
 
 import "gorm.io/gorm"
 
-type User struct {
+type SegmentsId struct {
 	gorm.Model
-	UserId     int64  `gorm:"column:user_id" json:"user_id"`
-	UserName   string `gorm:"column:user_name" json:"user_name"`     //用户名
-	UserPwd    string `gorm:"column:user_pwd" json:"user_pwd"`       //密码
-	UserMobile string `gorm:"column:user_mobile" json:"user_mobile"` //手机号码
-	UserEmail  string `gorm:"column:user_email" json:"user_email"`   //邮箱
-	CreatedAt  string `gorm:"column:created_at" json:"created_at"`
-	UpdatedAt  string `gorm:"column:updated_at" json:"updated_at"`
+	Id        int64  `gorm:"column:id" json:"id"`
+	MaxId     int64  `gorm:"column:max_id" json:"max_id"`     //当前最大id
+	Step      int64  `gorm:"column:step" json:"step"`         //号段的步长
+	BizType   int64  `gorm:"column:biz_type" json:"biz_type"` //业务类型
+	Version   int64  `gorm:"column:version" json:"version"`   // 版本号
+	CreatedAt string `gorm:"column:created_at" json:"created_at"`
+	UpdatedAt string `gorm:"column:updated_at" json:"updated_at"`
+}
+
+func (s *SegmentsId) TableName() string {
+	return "id_generator"
 }
