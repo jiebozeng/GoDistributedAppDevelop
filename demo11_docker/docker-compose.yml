@@ -1,0 +1,29 @@
+version: '3'
+services:
+  redis:
+    restart: always
+    image: redis:6.2
+    ports:
+      - 6379:6379
+    volumes:
+      - D://docker_redis/redis_data:/data
+
+  mysql5.7:
+   #构建mysql镜像
+     image: mysql:5.7
+     container_name: mysql5.7 # 容器名
+     command:
+       --default-authentication-plugin=mysql_native_password
+       --character-set-server=utf8mb4
+       --collation-server=utf8mb4_general_ci
+       --explicit_defaults_for_timestamp=true
+       --lower_case_table_names=1
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: test123 #root管理员用户密码
+       TZ: Asia/Shanghai
+     ports:
+       - '3317:3306'  #host物理直接映射端口为3306
+     volumes:
+       - ./mysql5.7/data/data:/var/lib/mysql
+       
