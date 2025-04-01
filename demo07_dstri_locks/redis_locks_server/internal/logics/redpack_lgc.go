@@ -53,22 +53,25 @@ func (r *RedPackLgc) GradRedPack(userId int64, redpackId int64) (redId int64, am
 		return -1, 0, errors.New("红包已抢完或无效")
 	}
 
-	// 计算红包金额（这里简化为总金额/20，可以根据需求调整）
-	if redpack.Amount <= 5 {
-		amount = redpack.Amount
+	// 计算红包金额（这里简化为总金额/个数，可以根据需求调整）
+	if redpack.Num-redpack.ProNum == 1 {
+		amount = redpack.RemainAmount
 	} else {
-		amount = redpack.Amount / 20
-		if amount <= 0 {
-			amount = 1 // 最小金额为1
-		}
+		amount = redpack.Amount / redpack.Num
 	}
-
 	// 更新已抢数量和剩余金额
 	redpack.ProNum++
-	redpack.Amount -= amount
-	if redpack.Amount == 0 {
+	redpack.RemainAmount -= amount
+	if redpack.RemainAmount == 0 {
 		redpack.Status = 5 //已领完
-		r.UpdateRedPackStatus(redpackId, 5)
+		clumnsMap := map[string]interface{}{
+			"pro_num":       redpack.ProNum,
+			"remain_amount": redpack.RemainAmount,
+			"status":        5,
+			"updated_at":    time.Now(),
+		}
+		r.UpdateRedPack(redpackId, clumnsMap)
+		//r.UpdateRedPackStatus(redpackId, 5)
 	}
 	updatedRedpackJSON, err := json.Marshal(redpack)
 	if err != nil {
@@ -108,6 +111,12 @@ func (r *RedPackLgc) GetRedPackById(redpackId int64) (*models.Redpack, error) {
 func (r *RedPackLgc) UpdateRedPackProNum(redpackId int64) error {
 	query := mysqldb.Mysql.Model(&models.Redpack{})
 	return query.Where("id = ?", redpackId).Update("prop_num", gorm.Expr("prop_num + 1")).Error
+}
+
+// 更新红包信息表
+func (r *RedPackLgc) UpdateRedPack(redpackId int64, columnsMap map[string]interface{}) error {
+	query := mysqldb.Mysql.Model(&models.Redpack{})
+	return query.Where("id = ?", redpackId).Updates(columnsMap).Error
 }
 
 // 更新状态

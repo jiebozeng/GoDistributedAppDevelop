@@ -30,8 +30,8 @@ func main() {
 
 	u, _ := url.ParseRequestURI(targetUrl + "list")
 	data := url.Values{}
-	data.Set("pageNum", "1")
-	data.Set("pageSize", "5")
+	data.Set("page_num", "1")
+	data.Set("page_size", "5")
 
 	u.RawQuery = data.Encode()
 	rspList, err := http.Get(u.String())

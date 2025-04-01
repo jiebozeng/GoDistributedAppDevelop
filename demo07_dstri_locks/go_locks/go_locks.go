@@ -16,6 +16,9 @@ func doInit() {
 func main() {
 	var i int64 = 0
 	var mu sync.Mutex
+	go func() {
+		i++
+	}()
 	//开始锁
 	mu.Lock()
 	//对共享资源进行操作

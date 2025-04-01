@@ -20,11 +20,12 @@ func ProduceRedpack() {
 	tm.AddTimer(time.Second*5, 10, func(t *timer.Timer) {
 		//生成红包 插入数据库 并写入Redis
 		redpack := &models.Redpack{
-			Amount:    100,
-			Num:       10,
-			ValidTime: -1,
-			Status:    1,
-			ProNum:    0,
+			Amount:       100,
+			RemainAmount: 100,
+			Num:          10,
+			ValidTime:    -1,
+			Status:       1,
+			ProNum:       0,
 		}
 		redpack.CreatedAt = time.Now()
 		redpack.UpdatedAt = time.Now()

@@ -30,8 +30,9 @@ func GetUser(c *gin.Context) {
 // @Param   param query int "page_num" "page_size"
 // @Router  /list [get]
 func UserList(c *gin.Context) {
-	pageNum := c.Param("page_num")
-	pageSize := c.Param("page_size")
+	pageNum, _ := c.GetQuery("page_num")
+	pageSize, _ := c.GetQuery("page_size")
+
 	userLgc := &logics.User_lgc{}
 	userList, err := userLgc.GetUserList(convert.ToInt64(pageNum), convert.ToInt64(pageSize))
 	if err != nil {

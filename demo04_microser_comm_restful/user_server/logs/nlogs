@@ -4,3 +4,6 @@
 {"level":"info","created_at":"2025-01-09T16:38:05.612+0800","caller":"logs/log.go:61","message":"log server start"}
 {"level":"info","created_at":"2025-01-09T16:53:20.799+0800","caller":"logs/log.go:61","message":"log server start"}
 {"level":"info","created_at":"2025-01-09T17:53:54.258+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-03-11T14:51:41.703+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-03-11T14:53:08.143+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-03-11T14:56:20.215+0800","caller":"logs/log.go:61","message":"log server start"}

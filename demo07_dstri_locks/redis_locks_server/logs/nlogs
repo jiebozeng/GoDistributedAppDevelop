@@ -64,3 +64,49 @@
 {"level":"info","created_at":"2025-01-10T11:14:56.807+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>13"}
 {"level":"info","created_at":"2025-01-10T11:15:01.808+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>14"}
 {"level":"info","created_at":"2025-01-10T11:15:06.803+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>15"}
+{"level":"info","created_at":"2025-04-01T17:38:56.833+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-04-01T17:41:03.960+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-04-01T17:47:53.124+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-04-01T17:47:58.143+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>16"}
+{"level":"info","created_at":"2025-04-01T17:48:03.155+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>17"}
+{"level":"info","created_at":"2025-04-01T17:48:08.169+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>18"}
+{"level":"info","created_at":"2025-04-01T17:48:13.146+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>19"}
+{"level":"info","created_at":"2025-04-01T17:48:18.146+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>20"}
+{"level":"info","created_at":"2025-04-01T17:48:23.153+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>21"}
+{"level":"info","created_at":"2025-04-01T17:48:28.159+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>22"}
+{"level":"info","created_at":"2025-04-01T17:48:33.149+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>23"}
+{"level":"info","created_at":"2025-04-01T17:48:38.145+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>24"}
+{"level":"info","created_at":"2025-04-01T17:48:43.154+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>25"}
+{"level":"info","created_at":"2025-04-01T17:51:02.457+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-04-01T17:51:07.506+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>26"}
+{"level":"info","created_at":"2025-04-01T17:51:12.483+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>27"}
+{"level":"info","created_at":"2025-04-01T17:51:17.486+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>28"}
+{"level":"info","created_at":"2025-04-01T17:51:22.484+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>29"}
+{"level":"info","created_at":"2025-04-01T17:51:27.525+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>30"}
+{"level":"info","created_at":"2025-04-01T17:51:32.495+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>31"}
+{"level":"info","created_at":"2025-04-01T17:51:37.486+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>32"}
+{"level":"info","created_at":"2025-04-01T17:51:42.499+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>33"}
+{"level":"info","created_at":"2025-04-01T17:51:47.488+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>34"}
+{"level":"info","created_at":"2025-04-01T17:51:52.489+0800","caller":"produce_redpack/produce_redpack.go:36","message":"生成红包成功 id=>35"}
+{"level":"info","created_at":"2025-04-01T17:53:36.991+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-04-01T17:53:42.030+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>1"}
+{"level":"info","created_at":"2025-04-01T17:53:47.036+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>2"}
+{"level":"info","created_at":"2025-04-01T17:53:52.018+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>3"}
+{"level":"info","created_at":"2025-04-01T17:53:57.019+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>4"}
+{"level":"info","created_at":"2025-04-01T17:54:02.027+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>5"}
+{"level":"info","created_at":"2025-04-01T17:54:07.019+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>6"}
+{"level":"info","created_at":"2025-04-01T17:54:12.045+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>7"}
+{"level":"info","created_at":"2025-04-01T17:54:17.021+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>8"}
+{"level":"info","created_at":"2025-04-01T17:54:22.011+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>9"}
+{"level":"info","created_at":"2025-04-01T17:54:27.016+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>10"}
+{"level":"info","created_at":"2025-04-01T17:55:52.097+0800","caller":"logs/log.go:61","message":"log server start"}
+{"level":"info","created_at":"2025-04-01T17:55:57.122+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>11"}
+{"level":"info","created_at":"2025-04-01T17:56:02.120+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>12"}
+{"level":"info","created_at":"2025-04-01T17:56:07.124+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>13"}
+{"level":"info","created_at":"2025-04-01T17:56:12.127+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>14"}
+{"level":"info","created_at":"2025-04-01T17:56:17.122+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>15"}
+{"level":"info","created_at":"2025-04-01T17:56:22.121+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>16"}
+{"level":"info","created_at":"2025-04-01T17:56:27.120+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>17"}
+{"level":"info","created_at":"2025-04-01T17:56:32.125+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>18"}
+{"level":"info","created_at":"2025-04-01T17:56:37.121+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>19"}
+{"level":"info","created_at":"2025-04-01T17:56:42.127+0800","caller":"produce_redpack/produce_redpack.go:37","message":"生成红包成功 id=>20"}

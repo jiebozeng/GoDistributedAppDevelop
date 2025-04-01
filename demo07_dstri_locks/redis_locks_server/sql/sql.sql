@@ -3,6 +3,7 @@
 CREATE TABLE `ts_redpack`  (
     `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'id  自增',
     `amount` bigint NOT NULL DEFAULT 0 COMMENT '红包金额',
+    `remain_amount` bigint NOT NULL DEFAULT 0 COMMENT '剩余金额',
     `num` int NOT NULL DEFAULT 0 COMMENT '红包数量',
     `valid_time` int NOT NULL DEFAULT 0 COMMENT '有效期',
     `status` int NOT NULL DEFAULT 0 COMMENT '状态:1可用,2已结束,3已取消,5已领完',
